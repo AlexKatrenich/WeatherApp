@@ -1,7 +1,6 @@
 package com.katrenich.oleksandr.main_presentation
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
@@ -10,9 +9,12 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.katrenich.oleksandr.basic_presentation.ui.theme.SimpleWeatherAppTheme
+import com.katrenich.oleksandr.base_presentation.ui.screen.BaseActivity
+import com.katrenich.oleksandr.base_presentation.ui.theme.SimpleWeatherAppTheme
+import dagger.hilt.android.AndroidEntryPoint
 
-class MainActivity : ComponentActivity() {
+@AndroidEntryPoint
+class MainActivity : BaseActivity() {
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 		setContent {

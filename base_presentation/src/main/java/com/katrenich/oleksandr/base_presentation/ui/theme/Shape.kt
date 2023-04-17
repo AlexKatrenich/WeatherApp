@@ -1,4 +1,4 @@
-package com.katrenich.oleksandr.basic_presentation.ui.theme
+package com.katrenich.oleksandr.base_presentation.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

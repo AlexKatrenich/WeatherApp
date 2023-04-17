@@ -1,4 +1,4 @@
-package com.katrenich.oleksandr.basic_presentation.ui.theme
+package com.katrenich.oleksandr.base_presentation.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
