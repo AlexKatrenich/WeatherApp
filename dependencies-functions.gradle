@@ -1,0 +1,77 @@
+apply from: 'dependencies.gradle'
+
+ext.applyHiltDependencies = { project ->
+  project.dependencies {
+    implementation deps.hilt.hilt_android
+    kapt deps.hilt.hilt_android_compiler
+  }
+}
+
+ext.applyRoomDependencies = { project ->
+  project.dependencies {
+    implementation deps.room.room_runtime
+    implementation deps.room.room_ktx
+    kapt deps.room.room_compiler
+  }
+}
+
+ext.applyCoroutinesDependencies = { project ->
+  project.dependencies {
+    implementation deps.coroutines.kotlinx_coroutines_core
+    implementation deps.coroutines.kotlinx_coroutines_android
+  }
+}
+
+ext.applyRetrofitDependencies = { project ->
+  project.dependencies {
+    implementation deps.retrofit.retrofit
+    implementation deps.retrofit.converter_gson
+  }
+}
+
+ext.applyOkHttpDependencies = { project ->
+  project.dependencies {
+    implementation deps.okHttp.okhttp
+    implementation deps.okHttp.logging_interceptor
+  }
+}
+
+ext.applyGsonDependencies = { project ->
+  project.dependencies {
+    implementation deps.gson.gson
+  }
+}
+
+ext.applySplashScreenDependencies = { project ->
+  project.dependencies {
+    implementation deps.coreAndroidX.splashscreen
+  }
+}
+
+ext.applyDataStoreDependencies = { project ->
+  project.dependencies {
+    implementation deps.dataStore.dataStore
+  }
+}
+
+ext.applyComposeUiDependencies = { project ->
+  project.dependencies {
+    implementation deps.composeUi.activity
+    implementation deps.composeUi.ui
+    implementation deps.composeUi.uiPreview
+    implementation deps.composeUi.material
+    debugImplementation deps.composeUi.uiTooling
+  }
+}
+
+ext.applyViewModelDependencies = { project ->
+  project.dependencies {
+    implementation deps.composeViewModel.viewModel
+  }
+}
+
+ext.applyNavigationDependencies = { project ->
+  project.dependencies {
+    implementation deps.navigation.navigation
+  }
+}

@@ -1,0 +1,24 @@
+
+ext.applyAndroid = { project ->
+  project.android {
+
+    compileSdkVersion versions.compileVersion
+
+    defaultConfig {
+      minSdkVersion versions.minVersion
+      targetSdkVersion versions.compileVersion
+      versionCode versions.verCode
+      versionName versions.verName
+      testInstrumentationRunner versions.testRunner
+    }
+
+    compileOptions {
+      sourceCompatibility = JavaVersion.VERSION_1_8
+      targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+      jvmTarget = JavaVersion.VERSION_1_8
+    }
+  }
+}

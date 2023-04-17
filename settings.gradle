@@ -1,0 +1,14 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        maven { url 'https://jitpack.io' }
+        mavenCentral()
+        //noinspection JcenterRepositoryObsolete
+        jcenter()
+    }
+}
+rootProject.name = "SimpleWeatherApp"
+include ':app'
+include ':basic_presentation'
+include ':main_presentation'

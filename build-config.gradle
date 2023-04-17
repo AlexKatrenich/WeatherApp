@@ -1,0 +1,20 @@
+android {
+
+  buildTypes {
+    debug {
+      minifyEnabled false
+
+      buildConfigField "String", "PREF_FILE_NAME", "\"SIMPLE_WEATHER_APP\""
+      buildConfigField "String", "BASE_URL", "\"https://weather.com/\""
+    }
+    release {
+      minifyEnabled true
+
+      buildConfigField "String", "PREF_FILE_NAME", "\"SIMPLE_WEATHER_APP\""
+      buildConfigField "String", "BASE_URL", "\"https://weather.com/\""
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+
+

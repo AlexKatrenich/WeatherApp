@@ -1,0 +1,27 @@
+def versions = [:]
+
+versions.compileVersion = 33
+versions.targetVersion = 33
+versions.minVersion = 27
+
+versions.verCode = 1
+versions.verName = "1.0.0"
+versions.testRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+versions.gradleVersion = '7.4.2'
+versions.kotlinVersion = '1.8.0'
+
+versions.daggerVersion = "2.43.2"
+versions.roomVersion = "2.4.3"
+versions.coroutinesVersion = "1.5.2"
+versions.retrofitVersion = "2.9.0"
+versions.okHttpVersion = "4.9.3"
+versions.gsonVersion = "2.8.9"
+versions.androidXCoreVersion = "1.10.0"
+versions.dataStoreVersion = "1.0.0"
+versions.splashScreenVersion = "1.0.0"
+versions.composeUiVersion = "1.4.0"
+versions.composeViewModel = "2.5.1"
+versions.navigation = "2.5.3"
+
+ext.versions = versions

@@ -1,0 +1,21 @@
+plugins {
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    composeOptions {
+        kotlinCompilerExtensionVersion = versions.composeUiVersion
+    }
+    buildFeatures {
+        compose true
+    }
+}
+
+dependencies {
+    applyHiltDependencies(this)
+    applyRetrofitDependencies(this)
+    applyComposeUiDependencies(this)
+    applyNavigationDependencies(this)
+
+    implementation project(":main_presentation")
+}

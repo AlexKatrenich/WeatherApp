@@ -1,0 +1,68 @@
+apply from: 'versions.gradle'
+
+def deps = [:]
+
+def hilt = [:]
+hilt.hilt_android = "com.google.dagger:hilt-android:$versions.daggerVersion"
+hilt.hilt_android_compiler = "com.google.dagger:hilt-android-compiler:$versions.daggerVersion"
+
+deps.hilt = hilt
+
+def room = [:]
+room.room_runtime = "androidx.room:room-runtime:$versions.roomVersion"
+room.room_ktx = "androidx.room:room-ktx:$versions.roomVersion"
+room.room_compiler = "androidx.room:room-compiler:$versions.roomVersion"
+
+deps.room = room
+
+def coroutines = [:]
+coroutines.kotlinx_coroutines_core =
+    "org.jetbrains.kotlinx:kotlinx-coroutines-core:$versions.coroutinesVersion"
+coroutines.kotlinx_coroutines_android =
+    "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutinesVersion"
+
+deps.coroutines = coroutines
+
+def retrofit = [:]
+retrofit.retrofit = "com.squareup.retrofit2:retrofit:$versions.retrofitVersion"
+retrofit.converter_gson = "com.squareup.retrofit2:converter-gson:$versions.retrofitVersion"
+
+deps.retrofit = retrofit
+
+def okHttp = [:]
+okHttp.okhttp = "com.squareup.okhttp3:okhttp:$versions.okHttpVersion"
+okHttp.logging_interceptor = "com.squareup.okhttp3:logging-interceptor:$versions.okHttpVersion"
+
+deps.okHttp = okHttp
+
+def gson = [:]
+gson.gson = "com.google.code.gson:gson:$versions.gsonVersion"
+
+deps.gson = gson
+
+def dataStore = [:]
+dataStore.dataStore = "androidx.datastore:datastore-preferences:$versions.dataStoreVersion"
+
+deps.dataStore = dataStore
+
+def composeUi = [:]
+composeUi.activity = "androidx.activity:activity-compose:$versions.composeUiVersion"
+composeUi.ui = "androidx.compose.ui:ui:$versions.composeUiVersion"
+composeUi.uiPreview = "androidx.compose.ui:ui-tooling-preview:$versions.composeUiVersion"
+composeUi.material = "androidx.compose.material:material:$versions.composeUiVersion"
+composeUi.uiTooling = "androidx.compose.ui:ui-tooling"
+
+deps.composeUi = composeUi
+
+def composeViewModel = [:]
+composeViewModel.viewModel = "androidx.lifecycle:lifecycle-viewmodel-compose:$versions.composeViewModel"
+
+deps.composeViewModel = composeViewModel
+
+def navigation = [:]
+navigation.navigation = "androidx.navigation:navigation-compose:$versions.navigation"
+
+deps.navigation = navigation
+
+// Always keep on the bottom
+ext.deps = deps
