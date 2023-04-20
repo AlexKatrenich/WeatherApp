@@ -10,5 +10,15 @@ dependencyResolutionManagement {
 }
 rootProject.name = "SimpleWeatherApp"
 include ':app'
-include ':base_presentation'
+// base
+include ':base-data'
+include ':base-domain'
+include ':base-di'
+include ':base-presentation'
+
+// main
 include ':main_presentation'
+include ':main-interactor'
+include ':main-domain'
+include ':main-di'
+include ':main-data'

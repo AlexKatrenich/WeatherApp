@@ -11,7 +11,14 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/base_presentation" />
+            <option value="$PROJECT_DIR$/base-data" />
+            <option value="$PROJECT_DIR$/base-di" />
+            <option value="$PROJECT_DIR$/base-domain" />
+            <option value="$PROJECT_DIR$/base-presentation" />
+            <option value="$PROJECT_DIR$/main-data" />
+            <option value="$PROJECT_DIR$/main-di" />
+            <option value="$PROJECT_DIR$/main-domain" />
+            <option value="$PROJECT_DIR$/main-interactor" />
             <option value="$PROJECT_DIR$/main_presentation" />
           </set>
         </option>

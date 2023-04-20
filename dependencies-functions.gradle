@@ -75,3 +75,9 @@ ext.applyNavigationDependencies = { project ->
     implementation deps.navigation.navigation
   }
 }
+
+ext.applyUiControllerDependencies = { project ->
+  project.dependencies {
+    implementation deps.uiController.uiController
+  }
+}

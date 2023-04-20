@@ -64,5 +64,10 @@ navigation.navigation = "androidx.navigation:navigation-compose:$versions.naviga
 
 deps.navigation = navigation
 
+def uiController = [:]
+uiController.uiController = "com.google.accompanist:accompanist-systemuicontroller:$versions.systemUiController"
+
+deps.uiController = uiController
+
 // Always keep on the bottom
 ext.deps = deps

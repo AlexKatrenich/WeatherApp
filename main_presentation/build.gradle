@@ -14,6 +14,12 @@ android {
 dependencies {
     applyHiltDependencies(this)
     applyComposeUiDependencies(this)
-    implementation project(':base_presentation')
+    applyUiControllerDependencies(this)
+    applyViewModelDependencies(this)
+    applyCoroutinesDependencies(this)
 
+    implementation project(':base-domain')
+    implementation project(':base-presentation')
+
+    implementation project(':main-interactor')
 }

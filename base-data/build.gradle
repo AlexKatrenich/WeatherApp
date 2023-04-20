@@ -1,0 +1,11 @@
+plugins {
+    id 'dagger.hilt.android.plugin'
+}
+
+dependencies {
+    applyHiltDependencies(this)
+    applyRoomDependencies(this)
+    applyOkHttpDependencies(this)
+
+    implementation project(":base-domain")
+}

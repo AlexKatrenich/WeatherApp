@@ -9,7 +9,27 @@ android {
     buildFeatures {
         compose true
     }
+    buildTypes {
+        debug {
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/ic_launcher",
+                    appIconRound: "@mipmap/ic_launcher_round"
+            ]
+        }
+        release {
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/ic_launcher",
+                    appIconRound: "@mipmap/ic_launcher_round"
+            ]
+        }
+    }
 }
+
+kapt {
+    correctErrorTypes = true
+}
+
+hilt { enableAggregatingTask = true }
 
 dependencies {
     applyHiltDependencies(this)
@@ -18,4 +38,5 @@ dependencies {
     applyNavigationDependencies(this)
 
     implementation project(":main_presentation")
+    implementation project(":base-di")
 }

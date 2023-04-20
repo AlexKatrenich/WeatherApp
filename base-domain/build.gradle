@@ -1,0 +1,4 @@
+dependencies {
+    applyCoroutinesDependencies(this)
+    applyGsonDependencies(this)
+}

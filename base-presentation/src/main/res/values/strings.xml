@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">SimpleWeatherApp</string>
+    <string name="city_name_cherkasy">Cherkasy</string>
+    <string name="city_name_chernihiv">Chernihiv</string>
+    <string name="city_name_chernivtsi">Chernivtsi</string>
+    <string name="city_name_dnipro">Dnipro</string>
+    <string name="city_name_donetsk">Donetsk</string>
+    <string name="city_name_ivano_frankivsk">Ivano_frankivsk</string>
+    <string name="city_name_kharkiv">Kharkiv</string>
+    <string name="city_name_kherson">Kherson</string>
+    <string name="city_name_khmelnitsky">Khmelnitsky</string>
+    <string name="city_name_kropyvnitskyi">Kropyvnitskyi</string>
+    <string name="city_name_kyiv">Kyiv</string>
+    <string name="city_name_luhansk">Luhansk</string>
+    <string name="city_name_lutsk">Lutsk</string>
+    <string name="city_name_lviv">Lviv</string>
+    <string name="city_name_mykolaiv">Mykolaiv</string>
+    <string name="city_name_odesa">Odesa</string>
+    <string name="city_name_poltava">Poltava</string>
+    <string name="city_name_rivne">Rivne</string>
+    <string name="city_name_simferopol">Simferopol</string>
+    <string name="city_name_sumy">Sumy</string>
+    <string name="city_name_ternopil">Ternopil</string>
+    <string name="city_name_uzhgorod">Uzhgorod</string>
+    <string name="city_name_vinnytsia">Vinnytsia</string>
+    <string name="city_name_zaporizhzhia">Zaporizhzhia</string>
+    <string name="city_name_zhitomir">Zhitomir</string>
+</resources>

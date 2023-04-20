@@ -1,0 +1,13 @@
+plugins {
+    id 'dagger.hilt.android.plugin'
+}
+
+dependencies {
+    applyHiltDependencies(this)
+    applyGsonDependencies(this)
+    applyOkHttpDependencies(this)
+    applyRetrofitDependencies(this)
+
+    implementation project(':base-data')
+    implementation project(':base-domain')
+}

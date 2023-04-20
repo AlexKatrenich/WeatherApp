@@ -23,5 +23,6 @@ versions.splashScreenVersion = "1.0.0"
 versions.composeUiVersion = "1.4.0"
 versions.composeViewModel = "2.5.1"
 versions.navigation = "2.5.3"
+versions.systemUiController = "0.31.0-alpha"
 
 ext.versions = versions
