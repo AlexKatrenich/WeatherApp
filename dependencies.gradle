@@ -56,6 +56,7 @@ deps.composeUi = composeUi
 
 def composeViewModel = [:]
 composeViewModel.viewModel = "androidx.lifecycle:lifecycle-viewmodel-compose:$versions.composeViewModel"
+composeViewModel.lifecycle = "androidx.lifecycle:lifecycle-runtime-compose:$versions.composeViewModel"
 
 deps.composeViewModel = composeViewModel
 

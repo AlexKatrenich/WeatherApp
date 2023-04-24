@@ -11,6 +11,7 @@ dependencies {
     implementation project(':base-data')
     implementation project(':base-domain')
     implementation project(':base-di')
+    implementation project(':base-presentation')
 
     implementation project(':main-domain')
 }

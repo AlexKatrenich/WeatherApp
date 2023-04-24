@@ -1,7 +1,7 @@
-package com.katrenich.oleksandr.base_data.util
+package com.katrenich.oleksandr.base_presentation.ui.utils
 
 import android.util.Log
-import com.katrenich.oleksandr.base_data.BuildConfig
+import com.katrenich.oleksandr.base_presentation.BuildConfig
 
 fun log(message: String) {
   logd(message)

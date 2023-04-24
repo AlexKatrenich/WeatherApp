@@ -12,6 +12,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -19,12 +20,13 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.google.accompanist.systemuicontroller.SystemUiController
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.katrenich.oleksandr.base_presentation.ui.theme.*
-import com.katrenich.oleksandr.main_presentation.model.CityModel
-import com.katrenich.oleksandr.main_presentation.model.getCityModelsList
+import com.katrenich.oleksandr.main_domain.model.CitiesModel
+import com.katrenich.oleksandr.main_domain.model.CityModel
 import com.katrenich.oleksandr.main_presentation.view_model.CitiesViewModel
 
 @Composable
@@ -36,8 +38,11 @@ fun CitiesScreen(
 		color = MaterialTheme.colors.background,
 		darkIcons = isSystemInDarkTheme().not()
 	)
+
+	val citiesModel by viewModel.citiesState.collectAsStateWithLifecycle(CitiesModel())
+
 	CitiesScreenContent(
-		citiesModel = getCityModelsList(),
+		citiesModel = citiesModel,
 		onClickAction = viewModel::clickOnCity,
 		modifier = Modifier
 			.fillMaxSize()
@@ -49,13 +54,13 @@ fun CitiesScreen(
 fun CitiesScreenContent(
 	modifier: Modifier = Modifier,
 	onClickAction: (CityModel) -> Unit,
-	citiesModel: List<CityModel> = emptyList(),
+	citiesModel: CitiesModel,
 ) {
 	Surface(
 		color = MaterialTheme.colors.background
 	) {
 		LazyColumn(modifier = modifier) {
-			items(citiesModel) {model ->
+			items(citiesModel.cities) {model ->
 				CityItemView(
 					model = model,
 					onClickAction = onClickAction,
@@ -106,7 +111,11 @@ fun CityItemView(
 fun PreviewCityItemView() {
 	SimpleWeatherAppTheme {
 		CityItemView(
-			model = getCityModelsList().first(),
+			model = CityModel(
+				1,
+				com.katrenich.oleksandr.base_presentation.R.string.city_name_kharkiv,
+				com.katrenich.oleksandr.base_presentation.R.drawable.kharkiv
+			),
 			onClickAction = {},
 			modifier = Modifier
 				.fillMaxWidth()

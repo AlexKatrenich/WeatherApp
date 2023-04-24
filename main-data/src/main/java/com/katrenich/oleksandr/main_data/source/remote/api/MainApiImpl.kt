@@ -7,5 +7,7 @@ class MainApiImpl @Inject constructor(
 	private val service: MainApiService
 ) : MainApi {
 
-	override suspend fun getWeatherByCity() = service.getForecastByCoordinates()
+	override suspend fun getWeatherByCityCoordinates(
+		coordinates: String
+	) = service.getForecastByCoordinates(coordinates)
 }
