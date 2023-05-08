@@ -19,6 +19,8 @@ val LargeElevation = 10.dp
 
 // view sizes
 val DetailsScreenImageHeight = 550.dp
-val DetailScreenContentHeight = 500.dp
+val DetailScreenContentHeight = 450.dp
 
 val CityItemViewHeight = 180.dp
+
+val ProgressBarSize = 100.dp

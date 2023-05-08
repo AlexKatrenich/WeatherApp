@@ -1,0 +1,13 @@
+android {
+    composeOptions {
+        kotlinCompilerExtensionVersion = versions.composeUiVersion
+    }
+    buildFeatures {
+        compose true
+    }
+}
+
+dependencies {
+    applyComposeUiDependencies(this)
+    applyNavigationDependencies(this)
+}

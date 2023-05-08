@@ -1,0 +1,17 @@
+plugins {
+    id 'dagger.hilt.android.plugin'
+}
+
+dependencies {
+    applyHiltDependencies(this)
+    applyRoomDependencies(this)
+    applyCoroutinesDependencies(this)
+    applyRetrofitDependencies(this)
+
+    implementation project(':base-data')
+    implementation project(':base-domain')
+    implementation project(':base-di')
+    implementation project(':base-presentation')
+
+    implementation project(':cities-domain')
+}

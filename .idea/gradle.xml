@@ -14,12 +14,19 @@
             <option value="$PROJECT_DIR$/base-data" />
             <option value="$PROJECT_DIR$/base-di" />
             <option value="$PROJECT_DIR$/base-domain" />
+            <option value="$PROJECT_DIR$/base-navigation" />
             <option value="$PROJECT_DIR$/base-presentation" />
+            <option value="$PROJECT_DIR$/cities-data" />
+            <option value="$PROJECT_DIR$/cities-di" />
+            <option value="$PROJECT_DIR$/cities-domain" />
+            <option value="$PROJECT_DIR$/cities-interactor" />
+            <option value="$PROJECT_DIR$/cities-presentation" />
             <option value="$PROJECT_DIR$/main-data" />
             <option value="$PROJECT_DIR$/main-di" />
             <option value="$PROJECT_DIR$/main-domain" />
             <option value="$PROJECT_DIR$/main-interactor" />
             <option value="$PROJECT_DIR$/main_presentation" />
+            <option value="$PROJECT_DIR$/navigation" />
           </set>
         </option>
       </GradleProjectSettings>

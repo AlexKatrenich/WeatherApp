@@ -1,0 +1,24 @@
+plugins {
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    composeOptions {
+        kotlinCompilerExtensionVersion = versions.composeUiVersion
+    }
+    buildFeatures {
+        compose true
+    }
+}
+
+dependencies {
+    applyHiltDependencies(this)
+    applyComposeUiDependencies(this)
+    applyUiControllerDependencies(this)
+    applyNavigationDependencies(this)
+    applyViewModelDependencies(this)
+
+    implementation project(':base-navigation')
+
+    implementation project(':cities-presentation')
+}

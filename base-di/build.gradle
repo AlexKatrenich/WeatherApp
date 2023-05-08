@@ -9,5 +9,4 @@ dependencies {
     applyRetrofitDependencies(this)
 
     implementation project(':base-data')
-    implementation project(':base-domain')
 }

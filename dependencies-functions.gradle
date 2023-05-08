@@ -64,10 +64,15 @@ ext.applyComposeUiDependencies = { project ->
   }
 }
 
+ext.applyLifecycleDependencies = { project ->
+  project.dependencies {
+    implementation deps.composeLifecycle.lifecycle
+  }
+}
+
 ext.applyViewModelDependencies = { project ->
   project.dependencies {
-    implementation deps.composeViewModel.viewModel
-    implementation deps.composeViewModel.lifecycle
+    implementation deps.viewModel.viewModel
   }
 }
 

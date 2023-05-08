@@ -54,11 +54,15 @@ composeUi.uiTooling = "androidx.compose.ui:ui-tooling"
 
 deps.composeUi = composeUi
 
-def composeViewModel = [:]
-composeViewModel.viewModel = "androidx.lifecycle:lifecycle-viewmodel-compose:$versions.composeViewModel"
-composeViewModel.lifecycle = "androidx.lifecycle:lifecycle-runtime-compose:$versions.composeViewModel"
+def composeLifecycle = [:]
+composeLifecycle.lifecycle = "androidx.lifecycle:lifecycle-runtime-compose:$versions.composeViewModel"
 
-deps.composeViewModel = composeViewModel
+deps.composeLifecycle = composeLifecycle
+
+def viewModel = [:]
+viewModel.viewModel = "androidx.hilt:hilt-navigation-compose:$versions.viewModel"
+
+deps.viewModel = viewModel
 
 def navigation = [:]
 navigation.navigation = "androidx.navigation:navigation-compose:$versions.navigation"

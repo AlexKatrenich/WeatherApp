@@ -4,12 +4,8 @@ plugins {
 
 dependencies {
     applyHiltDependencies(this)
-    applyRoomDependencies(this)
-    applyRetrofitDependencies(this)
 
-    implementation project(':base-data')
     implementation project(':base-domain')
-    implementation project(':base-presentation')
 
     implementation project(':main-di')
     implementation project(':main-domain')

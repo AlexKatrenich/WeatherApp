@@ -17,10 +17,12 @@ dependencies {
     applyUiControllerDependencies(this)
     applyViewModelDependencies(this)
     applyCoroutinesDependencies(this)
+    applyNavigationDependencies(this)
 
     implementation project(':base-domain')
     implementation project(':base-presentation')
+    implementation project(':base-navigation')
+    implementation project(':navigation')
 
-    implementation project(':main-interactor')
-    implementation project(':main-domain')
+    implementation project(':cities-presentation')
 }
