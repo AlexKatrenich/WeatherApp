@@ -74,5 +74,10 @@ uiController.uiController = "com.google.accompanist:accompanist-systemuicontroll
 
 deps.uiController = uiController
 
+def imageLoader = [:]
+imageLoader.loader = "io.coil-kt:coil-compose:$versions.imageLoader"
+
+deps.imageLoader = imageLoader
+
 // Always keep on the bottom
 ext.deps = deps

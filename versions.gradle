@@ -25,5 +25,6 @@ versions.composeLifecycle = "2.6.1"
 versions.viewModel = "1.0.0"
 versions.navigation = "2.5.3"
 versions.systemUiController = "0.31.0-alpha"
+versions.imageLoader = "2.3.0"
 
 ext.versions = versions

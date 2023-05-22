@@ -22,6 +22,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.katrenich.oleksandr.base_presentation.ui.theme.*
 import com.katrenich.oleksandr.cities_domain.model.CityModel
 import com.katrenich.oleksandr.cities_presentation.state.CitiesState
+import com.katrenich.oleksandr.cities_presentation.ui.cities.CityItemView
 import kotlinx.coroutines.flow.StateFlow
 
 @Composable
@@ -36,7 +37,7 @@ fun CitiesScreen(
 		onClickAction = { navigateToCitiDetails.invoke(it.id) },
 		modifier = Modifier
 			.fillMaxSize()
-			.padding(horizontal = HorizontalPadding, vertical = VerticalPadding)
+			.padding(horizontal = HorizontalMediumPadding, vertical = VerticalSmallPadding)
 	)
 }
 
@@ -61,55 +62,5 @@ fun CitiesScreenContent(
 				)
 			}
 		}
-	}
-}
-
-@Composable
-fun CityItemView(
-	model: CityModel,
-	onClickAction: (CityModel) -> Unit,
-	modifier: Modifier
-) {
-	Surface(
-		modifier = modifier,
-		shape = RoundedCornerShape(MediumCornerSize),
-		color = MaterialTheme.colors.surface,
-		elevation = SmallElevation
-	) {
-		Box(
-			modifier = Modifier
-				.clickable { onClickAction(model) },
-			contentAlignment = Alignment.TopStart
-		) {
-			Image(
-				painter = painterResource(model.imageRes),
-				contentDescription = null,
-				modifier = Modifier.fillMaxSize(),
-				contentScale = ContentScale.FillBounds
-			)
-			Text(
-				text = stringResource(model.nameRes),
-				style = MaterialTheme.typography.h1.copy(color = Color.Black),
-				modifier = Modifier.padding(start = HorizontalPadding)
-			)
-		}
-	}
-}
-
-@Preview(showBackground = true)
-@Composable
-fun PreviewCityItemView() {
-	SimpleWeatherAppTheme {
-		CityItemView(
-			model = CityModel(
-				1,
-				com.katrenich.oleksandr.base_presentation.R.string.city_name_kharkiv,
-				com.katrenich.oleksandr.base_presentation.R.drawable.kharkiv
-			),
-			onClickAction = {},
-			modifier = Modifier
-				.fillMaxWidth()
-				.height(CityItemViewHeight)
-		)
 	}
 }

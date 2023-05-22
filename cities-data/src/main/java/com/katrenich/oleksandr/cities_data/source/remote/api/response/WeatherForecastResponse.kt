@@ -37,24 +37,25 @@ data class HourForecastResponse(
 
 fun WeatherForecastResponse.toDomainModel() =
 	WeatherForecastModel(
-		currentTempC = current.temp_c,
+		currentTempC = "${current.temp_c}°",
 		weatherConditionText = current.condition.text,
-		weatherConditionIconLink = current.condition.icon,
+		weatherConditionIconLink = "https://${current.condition.icon}",
 		windSpeed = current.wind_kph,
 		forecastHourModels = forecast.forecastday
 			.firstOrNull()
 			?.hour
 			?.map { it.toDomainModel() }
+			?.filterIndexed { index, _ -> index % 5 == 1 }
 			?: emptyList()
 	)
 
 fun HourForecastResponse.toDomainModel(): ForecastHourModel {
-	val sdf = SimpleDateFormat("hh:mm", Locale.getDefault())
-	val date = Date(time_epoch)
+	val sdf = SimpleDateFormat("HH", Locale.getDefault())
+	val date = Date(time_epoch * 1000)
 
 	return ForecastHourModel(
-		hour = sdf.format(date),
-		conditionWeatherIconLink = condition.icon,
-		tempC = temp_c
+		hour = sdf.format(date) + ":00",
+		conditionWeatherIconLink = "https://${condition.icon}",
+		tempC = "$temp_c°"
 	)
 }

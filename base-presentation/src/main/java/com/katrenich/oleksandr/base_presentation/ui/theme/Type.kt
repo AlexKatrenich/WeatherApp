@@ -13,6 +13,8 @@ val monseratRegular = FontFamily(Font(R.font.montserrat_regular))
 val monseratLight = FontFamily(Font(R.font.montserrat_light))
 val monseratMedium = FontFamily(Font(R.font.montserrat_medium))
 
+val TemperatureFontSize = 86.sp
+
 val Typography = Typography(
 	defaultFontFamily = monseratRegular,
 	body1 = TextStyle(
@@ -23,7 +25,7 @@ val Typography = Typography(
 	h1 = TextStyle(
 		fontFamily = monseratMedium,
 		fontWeight = FontWeight.Normal,
-		fontSize = 48.sp
+		fontSize = 38.sp
 	),
 	h2 = TextStyle(
 		fontFamily = monseratLight,
@@ -36,7 +38,7 @@ val Typography = Typography(
 		fontSize = 24.sp
 	),
 	caption = TextStyle(
-		fontFamily = monseratLight,
+		fontFamily = monseratMedium,
 		fontWeight = FontWeight.Normal,
 		fontSize = 18.sp
 	)
