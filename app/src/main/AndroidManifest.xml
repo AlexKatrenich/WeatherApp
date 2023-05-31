@@ -19,7 +19,7 @@
         <activity
             android:name=".main_presentation.ui.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.SimpleWeatherApp">
+            android:theme="@style/SplashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

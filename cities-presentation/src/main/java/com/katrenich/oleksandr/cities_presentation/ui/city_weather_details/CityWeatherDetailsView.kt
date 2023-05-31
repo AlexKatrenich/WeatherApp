@@ -16,7 +16,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import coil.compose.AsyncImage
-import coil.size.Dimension
 import com.katrenich.oleksandr.base_presentation.ui.theme.*
 import com.katrenich.oleksandr.cities_domain.model.CityWeatherForecastModel
 import com.katrenich.oleksandr.cities_domain.model.WeatherForecastModel

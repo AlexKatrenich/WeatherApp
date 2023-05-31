@@ -79,5 +79,10 @@ imageLoader.loader = "io.coil-kt:coil-compose:$versions.imageLoader"
 
 deps.imageLoader = imageLoader
 
+def splash = [:]
+splash.splashscreen = "androidx.core:core-splashscreen:$versions.splashScreenVersion"
+
+deps.splash = splash
+
 // Always keep on the bottom
 ext.deps = deps

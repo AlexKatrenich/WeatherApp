@@ -18,6 +18,7 @@ dependencies {
     applyViewModelDependencies(this)
     applyCoroutinesDependencies(this)
     applyNavigationDependencies(this)
+    applySplashScreenDependencies(this)
 
     implementation project(':base-domain')
     implementation project(':base-presentation')

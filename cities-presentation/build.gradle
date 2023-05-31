@@ -18,7 +18,7 @@ dependencies {
     applyViewModelDependencies(this)
     applyCoroutinesDependencies(this)
     applyLifecycleDependencies(this)
-    applyImageLoader(this)
+    applyImageLoaderDependencies(this)
 
     implementation project(':base-domain')
     implementation project(':base-presentation')

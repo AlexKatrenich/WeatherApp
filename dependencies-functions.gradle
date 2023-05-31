@@ -42,12 +42,6 @@ ext.applyGsonDependencies = { project ->
   }
 }
 
-ext.applySplashScreenDependencies = { project ->
-  project.dependencies {
-    implementation deps.coreAndroidX.splashscreen
-  }
-}
-
 ext.applyDataStoreDependencies = { project ->
   project.dependencies {
     implementation deps.dataStore.dataStore
@@ -88,8 +82,14 @@ ext.applyUiControllerDependencies = { project ->
   }
 }
 
-ext.applyImageLoader = { project ->
+ext.applyImageLoaderDependencies = { project ->
   project.dependencies {
     implementation deps.imageLoader.loader
+  }
+}
+
+ext.applySplashScreenDependencies = { project ->
+  project.dependencies {
+    implementation deps.splash.splashscreen
   }
 }
